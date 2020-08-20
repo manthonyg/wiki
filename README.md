@@ -1,3 +1,3 @@
-#WikiClone
+# WikiClone
 
-##A soft clone of wikipedia build in the django framework
+## A soft clone of wikipedia build in the django framework
