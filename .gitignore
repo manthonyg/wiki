@@ -136,3 +136,25 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+.vscode/settings.json
+my_env/pyvenv.cfg
+my_env/bin/activate
+my_env/bin/activate.csh
+my_env/bin/activate.fish
+my_env/bin/Activate.ps1
+my_env/bin/django-admin
+my_env/bin/django-admin.py
+my_env/bin/easy_install
+my_env/bin/easy_install-3.8
+my_env/bin/epylint
+my_env/bin/isort
+my_env/bin/markdown2
+my_env/bin/pip
+my_env/bin/pip3
+my_env/bin/pip3.8
+my_env/bin/pylint
+my_env/bin/pyreverse
+my_env/bin/python
+my_env/bin/python3
+my_env/bin/sqlformat
+my_env/bin/symilar
