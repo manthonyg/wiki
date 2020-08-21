@@ -5,7 +5,10 @@
 {% endblock %}
 
 {% block body %}
-<h1>Viewing {{ entry|safe }}</h1>
+<h5>Viewing ->'<em>{{ title }}</em>'</h5>
+<a href="{% url 'edit' %}?title={{ title }}">Edit</a>
+
+{{ entry|safe }}
 
 
 

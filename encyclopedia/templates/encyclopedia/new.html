@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Search {%endblock %}
+{% block body %}
+
+{% if edit %}
+<h1>Edit entry</h1>
+{% else %}
+<h1>Create new entry</h1>
+{% endif %}
+
+<form action="new" method="post">
+    {% csrf_token %}
+    {{ form }}
+    {% if edit %}
+    <button type="submit" class="save btn btn-default">Save changes</button>
+    {% else %}
+    <button type="submit" class="save btn btn-default">Submit</button>
+    {% endif %}
+</form>
+
+
+{% endblock %}
