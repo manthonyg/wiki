@@ -1,6 +1,6 @@
 # Wikipedia soft clone for CS50 Web
 
-[Submission video](https://youtu.be/UG-ruIlpgas)
+[Submission video](https://youtu.be/iUeK7prhWu8)
 
 
 ## Screenshots
