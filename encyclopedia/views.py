@@ -67,6 +67,7 @@ def edit(request):
     print(form)
     return render(request, 'encyclopedia/new.html', {
         'form': form,
+        'title': title,
         'edit': True
     })
     

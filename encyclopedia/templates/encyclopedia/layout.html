@@ -6,37 +6,70 @@
 
 <head>
     <title>{% block title %}{% endblock %}</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
         integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
     <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
 </head>
 
 <body>
-    <div class="row">
-        <div class="sidebar col-lg-2 col-md-3">
-            <h2>Wiki</h2>
-            <form action="search" method="get">
-                <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
-            </form>
-            <div>
-                <a href="{% url 'index' %}">Home</a>
+
+
+    <div id="layout" class="content pure-g">
+        <div id="nav" class="pure-u">
+            <a href="#" class="nav-menu-button">Menu</a>
+
+            <div class="nav-inner">
+                <h5 class="text-white">WIKIWHAT!?</h5>
+                <p class="text-white">...a soft wikipedia clone</p>
+
+                <div class="pure-menu">
+                    <ul class="pure-menu-list">
+
+                        <form action="search" method="get" class="pure-form">
+                            <input class="pure-input-1" type="text" name="q" placeholder="Search">
+                        </form>
+                        <li class="pure-menu-item"><a href="{% url 'index' %}" class="pure-menu-link">Wiki</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'new' %}" class="pure-menu-link">Create new</a></li>
+                        <li class="pure-menu-item"><a href="{% url 'random' %}" class="pure-menu-link">Random</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <a href="{% url 'new' %}">Create New Page</a>
-            </div>
-            <div>
-                <a href="{% url 'random' %}">Random Page</a>
-            </div>
-            {% block nav %}
-            {% endblock %}
         </div>
-        <div class="main col-lg-10 col-md-9">
-            {% block body %}
-            {% endblock %}
-        </div>
+
+
+
+        {% block body %}
+        {% endblock %}
     </div>
+
+
+
 
 </body>
 
 </html>
+
+<!-- 
+<div class="sidenav">
+    <h2>Wikiwhat?</h2>
+    <p></p>
+    <form action="search" method="get">
+        <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+    </form>
+    <div>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+    <div>
+        <a href="{% url 'new' %}">Create New Page</a>
+    </div>
+    <div>
+        <a href="{% url 'random' %}">Random Page</a>
+    </div>
+    {% block nav %}
+    {% endblock %}
+</div>
+<div class="main">
+
+</div> -->

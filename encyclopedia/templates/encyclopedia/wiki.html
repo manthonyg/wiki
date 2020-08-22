@@ -5,11 +5,27 @@
 {% endblock %}
 
 {% block body %}
-<h5>Viewing ->'<em>{{ title }}</em>'</h5>
-<a href="{% url 'edit' %}?title={{ title }}">Edit</a>
-
-{{ entry|safe }}
 
 
 
-{% endblock %}
+<div id="main" class="pure-u-1">
+    <div class="email-content">
+        <div class="email-content-header pure-g">
+            <div class="pure-u-1-2">
+                <h1 class="email-content-title">{{ title }}</h1>
+            </div>
+
+            <div class="email-content-controls pure-u-1-2">
+                <a href="{% url 'edit' %}?title={{ title }}" class="secondary-button pure-button">Edit</a>
+
+            </div>
+        </div>
+
+        <div class="email-content-body">
+            <p>
+                {{ entry|safe }}
+            </p>
+
+        </div>
+    </div>
+    {% endblock %}

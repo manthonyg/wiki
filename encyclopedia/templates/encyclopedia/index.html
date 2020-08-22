@@ -5,18 +5,26 @@ Encyclopedia
 {% endblock %}
 
 {% block body %}
-<h1>All Pages</h1>
 
-<ul>
-    {% for entry in entries %}
+<div id="main" class="pure-u-1">
+    <div class="email-content">
+        <div class="email-content-header pure-g">
+            <div class="pure-u-1-2">
+                <h1 class="email-content-title">Wiki Pages</h1>
+            </div>
+        </div>
 
-    <a href="{% url 'view_entry' entry %}">
-        <li>{{ entry }}</li>
-    </a>
+        {% for entry in entries %}
+        <div class="email-content-body">
+            <a href="{% url 'view_entry' entry %}">
+                <p>{{ entry|safe }}</p>
+            </a>
+        </div>
 
-    {% empty %}
-    <li>No entries</li>
-    {% endfor %}
-</ul>
+        {% empty %}
+        <li>No entries</li>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
