@@ -1,3 +1,15 @@
-# WikiClone
+# Wikipedia soft clone for CS50 Web
 
-## A soft clone of wikipedia build in the django framework
+[Submission video](https://youtu.be/UG-ruIlpgas)
+
+
+## Screenshots
+|![Home](/encyclopedia/static/encyclopedia/images/wiki_01.png)|![View](/encyclopedia/static/encyclopedia/images/wiki_02.png)|![Edit in .MD](/encyclopedia/static/encyclopedia/images/wiki_04.png)|![Save in HTML!](/encyclopedia/static/encyclopedia/images/wiki_05.png)|
+|---|---|---|---|
+
+
+### Demonstrated:
+1) Django
+2) CRSF
+3) CRUD 
+4) Markdown to HTML
