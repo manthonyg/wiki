@@ -13,7 +13,6 @@ def index(request):
 
 def view_entry(request, title):
     valid_entry = util.get_entry(title)
-    print(valid_entry, title)
     if valid_entry:
     
         html_entry = markdowner.convert(valid_entry)
@@ -50,6 +49,11 @@ def new(request):
         if form.is_valid():
             title=request.POST['title']
             content=request.POST['content']
+            if title in util.list_entries():
+                return render(request, "encyclopedia/error.html", {
+                    "error_title": "Entry already exists",
+                    "error_body": "The title of the entry already exists. Please try another title"
+                })
             util.save_entry(title=title, content=content)
             return redirect('view_entry', title=title)
     else:
@@ -64,7 +68,6 @@ def edit(request):
     form = NewEntryForm(initial={'title': title, 'content': content})
     form.title = title
     form.content = content
-    print(form)
     return render(request, 'encyclopedia/new.html', {
         'form': form,
         'title': title,
