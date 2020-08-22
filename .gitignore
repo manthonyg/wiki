@@ -158,3 +158,4 @@ my_env/bin/python
 my_env/bin/python3
 my_env/bin/sqlformat
 my_env/bin/symilar
+encyclopedia/static/.DS_Store
