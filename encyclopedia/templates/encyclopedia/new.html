@@ -1,7 +1,11 @@
 {% extends "encyclopedia/layout.html" %}
-{% block title %} Search {%endblock %}
-
-
+{% block title %}
+{% if edit %}
+Edit {{ title }}
+{% else %}
+New entry
+{% endif %}
+{%endblock %}
 
 
 {% block body %}
